@@ -9,6 +9,10 @@
     margin: 0 auto;
 }
 
+@import 'base/media';
+
+
 @import 'blocks/promo';
 @import 'blocks/header';
 @import 'blocks/buttons';
+@import 'blocks/advantages';
