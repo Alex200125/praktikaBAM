@@ -8,10 +8,11 @@
         margin-top: 65px;
     }
     &__header {
-        font-size: 30px;
-        font-weight: 700;
-        color: #0d0d0d;
-        text-align: center;
+        // font-size: 30px;
+        // font-weight: 700;
+        // color: #0d0d0d;
+        // text-align: center;
+        @include lable;
     }
     &__icon img {
         display: block;
