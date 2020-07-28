@@ -27,4 +27,9 @@
             margin: 0 auto;
         }
     }
+    .tns-outer {
+        [data-action=stop] {
+            display: none;
+        }
+    }
 }

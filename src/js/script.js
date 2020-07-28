@@ -20,9 +20,10 @@ const slider = tns({
     container: '.carousel__inner',
     items: 1,
     slideBy: 'page',
-    autoplay: false,
+    autoplay: true,
     controls: false,
-    nav: false
+    nav: false,
+    speed: 1200
 });
 document.querySelector('.prev').addEventListener('click', function () {
     slider.goTo('prev');
