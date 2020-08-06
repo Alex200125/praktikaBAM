@@ -35,6 +35,7 @@ document.querySelector('.next').addEventListener('click', function () {
 });
 
 $(document).ready(function() {
+
     $('.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
         $(this)
           .addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active')
@@ -75,7 +76,28 @@ $(document).ready(function() {
         catalogItemWidthMargin('.catalog-item__link', 0, 50 + '%');
         catalogItemWidthMargin('.catalog-item__back', 20, 'auto');
     }
-    widthDocument(); 
+    widthDocument();
 
+    linkRead();
+    
+    function linkRead() {
+        $('.reviews-client__link').each(function(i) {
+            $(this).on('click', function(e) {
+                e.preventDefault();
+                $('.reviews-client__comment').eq(i).css({
+                    'max-height':'500px'
+                });
+                $('.reviews-client__comment').eq(i).toggleClass('reviews-client__comment_active');
+
+                if(!$('.reviews-client__comment').eq(i).hasClass('reviews-client__comment_active')) {
+                    $('.reviews-client__link').text("скрыть");
+                } else {
+                    setTimeout(function() {
+                        $('.reviews-client__link').text("раскрыть");
+                    }, 400);
+                }
+            });
+        });
+    }
 
 });
