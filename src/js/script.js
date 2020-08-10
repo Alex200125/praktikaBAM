@@ -90,11 +90,11 @@ $(document).ready(function() {
                 $('.reviews-client__comment').eq(i).toggleClass('reviews-client__comment_active');
 
                 if(!$('.reviews-client__comment').eq(i).hasClass('reviews-client__comment_active')) {
-                    $('.reviews-client__link').text("скрыть");
+                    $('.reviews-client__link').eq(i).text("скрыть");
                 } else {
                     setTimeout(function() {
                         $('.reviews-client__link').text("раскрыть");
-                    }, 400);
+                    }, 50);
                 }
             });
         });
